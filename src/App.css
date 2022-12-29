@@ -1,38 +1,127 @@
-.App {
-  text-align: center;
+.shoppingCart {
+  display: flex;
+  justify-content: space-around;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.ProductList {
+  flex: 3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-right: 1px solid #ccc;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Cart {
+  flex: 1 1;
   display: flex;
   flex-direction: column;
+}
+.productListing {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 200px;
+  margin: 10px;
+  position: relative;
+}
+.productListing img {
+  height: 200px;
+  object-fit: cover;
+  width: 200px;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1;
+  margin-bottom: 10px;
+}
+.title {
+  display: flex;
+  flex: 1 1;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+}
+.price {
+  display: flex;
+  flex: 1 1;
+  align-items: center;
+  text-align: right;
+  justify-content: end;
 }
 
-.App-link {
-  color: #61dafb;
+.buttons {
+  flex: 1 1;
+}
+.Add {
+  background-color: green;
+  border: none;
+  color: #fff;
+  flex: 1;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+}
+.Remove {
+  background-color: crimson;
+  border: none;
+  color: #fff;
+  flex: 1;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.individualItem {
+  display: flex;
+  height: 80px;
+  border-bottom: 1px solid #ccc;
+}
+.individualItem img {
+  width: 20%;
+  align-items: center;
+  padding: 10px;
+  object-fit: contain;
+  display: flex;
+}
+.individualItem .details,
+.individualItem .itemCounter {
+  align-items: center;
+  display: flex;
+  padding-right: 10px;
+}
+
+.itemCounter button {
+  background: #fff;
+  border: 1px solid #333;
+}
+
+.itemCounter span {
+  background: #fff;
+  padding: 10px;
+}
+.total {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+button {
+  cursor: pointer;
+}
+button:hover {
+  box-shadow: inset 0px 5px 5px 2px rgb(0 0 0 / 12%);
+}
+.info {
+  position: absolute;
+  display: inline-block;
+  padding: 0px 3px 3px 3px;
+  color: #e83188;
+  font-size: 12px;
+  border-radius: 50%;
+  border: solid 3px #e83188;
+  width: 15px;
+  height: 15px;
+  font-weight: bold;
+  text-align: center;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
 }
